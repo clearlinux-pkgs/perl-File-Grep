@@ -4,7 +4,7 @@
 #
 Name     : perl-File-Grep
 Version  : 0.02
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/M/MN/MNEYLON/File-Grep-0.02.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MN/MNEYLON/File-Grep-0.02.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libf/libfile-grep-perl/libfile-grep-perl_0.02-1.debian.tar.xz
@@ -26,6 +26,7 @@ such functionality is needed.
 Summary: dev components for the perl-File-Grep package.
 Group: Development
 Provides: perl-File-Grep-devel = %{version}-%{release}
+Requires: perl-File-Grep = %{version}-%{release}
 
 %description dev
 dev components for the perl-File-Grep package.
@@ -44,7 +45,7 @@ license components for the perl-File-Grep package.
 cd ..
 %setup -q -T -D -n File-Grep-0.02 -b 1
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/File-Grep-0.02/deblicense/
+cp -r %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/File-Grep-0.02/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/

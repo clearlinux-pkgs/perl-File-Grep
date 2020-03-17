@@ -4,7 +4,7 @@
 #
 Name     : perl-File-Grep
 Version  : 0.02
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/M/MN/MNEYLON/File-Grep-0.02.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MN/MNEYLON/File-Grep-0.02.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libf/libfile-grep-perl/libfile-grep-perl_0.02-1.debian.tar.xz
@@ -81,7 +81,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-File-Grep
-cp %{_builddir}/File-Grep-0.02/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-File-Grep/c434903250cad6fd117db3f486c290796b200da6
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-File-Grep/c434903250cad6fd117db3f486c290796b200da6
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -105,4 +105,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/File/Grep.pm
+/usr/lib/perl5/vendor_perl/5.30.2/File/Grep.pm

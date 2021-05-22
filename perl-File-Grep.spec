@@ -4,7 +4,7 @@
 #
 Name     : perl-File-Grep
 Version  : 0.02
-Release  : 19
+Release  : 20
 URL      : https://cpan.metacpan.org/authors/id/M/MN/MNEYLON/File-Grep-0.02.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MN/MNEYLON/File-Grep-0.02.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libf/libfile-grep-perl/libfile-grep-perl_0.02-1.debian.tar.xz
